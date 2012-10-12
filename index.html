@@ -26,6 +26,7 @@ function uploadError(result) {
 }
 
 function fileUpload() {
+  alert("test");
   var parameters, options;
   try {
     parameters = { app : "webworks" };
@@ -37,7 +38,7 @@ function fileUpload() {
       chunkedMode : true,
       chunkSize : 1024
     };
-    blackberry.io.filetransfer.upload("http://localhost/bbcloud/Desert.jpg", "http://localhost/bbcloud/", uploadSuccess, uploadError, options);
+    blackberry.io.filetransfer.upload("/bbcloud/123.jpg", "/bbcloud", uploadSuccess, uploadError, options);
   } catch(e) {
     alert("Exception in fileUpload: " + e);
   }
