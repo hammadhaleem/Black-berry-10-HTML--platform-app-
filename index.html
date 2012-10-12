@@ -6,7 +6,23 @@
     <script src="webworks-1.0.2.9.js"></script>
     <script src="work.js"></script>
 
+      <script type="text/javascript">
 
+function dialogCallBack(index){
+  alert(index);
+}
+
+function customDialog() {
+  try {
+    var buttons = ["Yes", "No", "Sometimes", "NA"];
+    var ops = {title : "Choose the answer that describes you best", size : blackberry.ui.dialog.SIZE_TALL, position : blackberry.ui.dialog.CENTER};
+    blackberry.ui.dialog.customAskAsync("Do you routinely work out?", buttons, dialogCallBack, ops);
+  } catch(e) {
+    alert("Exception in customDialog: " + e);
+  }
+}
+
+</script>
 
     <script type="text/javascript">
 
@@ -26,7 +42,6 @@ function uploadError(result) {
 }
 
 function fileUpload() {
-  alert("test");
   var parameters, options;
   try {
     parameters = { app : "webworks" };
@@ -38,7 +53,9 @@ function fileUpload() {
       chunkedMode : true,
       chunkSize : 1024
     };
-    blackberry.io.filetransfer.upload("/bbcloud/123.jpg", "/bbcloud", uploadSuccess, uploadError, options);
+
+    alert("test1");
+    blackberry.io.filetransfer.upload();
   } catch(e) {
     alert("Exception in fileUpload: " + e);
   }
