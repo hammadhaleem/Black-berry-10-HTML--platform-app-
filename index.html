@@ -29,11 +29,26 @@ for(var i = 0; I < e. touches.length; i++)
    // do something
 }
 
+function takePic() {
+  try {
+    blackberry.media.camera.takePic(successCB);
+  } catch(e) {
+    alert("Error in supported: " + e);
+  }
+}
+
+function successCB(filePath) {
+  blackberry.media.camera.close();
+  // do something with filePath
+}
+
+
+
    </script>
 </head>
 <body>
    <p>Hello World</p>
-    <img src="button.png" ontouchstart="alert(event.target)" />
+    <img src="button.png" ontouchstart="alert(event.target);takepic()" />
 
 </body>
 </html>
