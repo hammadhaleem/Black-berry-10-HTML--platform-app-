@@ -1,0 +1,45 @@
+<html>
+<head>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript">
+
+function sendimage() {
+
+
+	var filename=$("#image").val();
+alert("test");
+/*$.ajax({
+  type: "POST",
+  url: "http://engineerinme.com/apps/sdk/gettext.php",
+  data: { file:filename }
+}).done(function( msg ) {
+  alert( "Data Saved: " + msg );
+});*/
+
+$("form").submit(function () { alert ("end"); return false;  });
+
+
+
+}
+
+
+</script>
+</head>
+
+<body>
+
+<form id="form" method="POST" action="http://engineerinme.com/apps/sdk/gettext.php" enctype="multipart/form-data" >
+	<input type="file" name="image" id="image" />
+
+
+	<button onclick="sendimage();">Send Picture</button>
+
+
+
+</form>
+
+</body>
+
+
+
+</html>
