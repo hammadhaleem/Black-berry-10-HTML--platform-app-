@@ -35,8 +35,10 @@ function successCB(filePath) {
 
 function at(){
 
-  takepic();
+ alert ("hello ");
   alert(event.target); 
+
+   takepic();
 
 }
 
