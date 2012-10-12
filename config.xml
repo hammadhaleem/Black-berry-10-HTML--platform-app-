@@ -8,5 +8,6 @@
   <content src="index.html"/>
   <feature id="blackberry.identity" required="true" version="1.0.0.0"/>
   <feature id="blackberry.media.camera" />
+  <feature id="blackberry.io.filetransfer" />
   <rim:permit>use_camera</rim:permit> 
 </widget>
