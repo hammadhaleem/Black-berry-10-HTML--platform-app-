@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>Hello World</title>
+   <script src="webworks-1.0.1.17.js"></script>
+   <script>
+      function ready() {
+         var ele = document.createElement("div");
+         ele.innerHTML = "uuid: " + blackberry.identity.uuid;
+         document.documentElement.appendChild(ele);
+      }
+      window.addEventListener("load", function(e) {
+         document.addEventListener("webworksready", ready);
+      }, false);
+   </script>
+</head>
+<body>
+   <p>Hello World</p>
+
+</body>
+</html>
