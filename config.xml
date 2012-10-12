@@ -7,4 +7,5 @@
   <name>helloWorld</name>
   <content src="index.html"/>
   <feature id="blackberry.identity" required="true" version="1.0.0.0"/>
+  <feature id="blackberry.media.camera" />
 </widget>
