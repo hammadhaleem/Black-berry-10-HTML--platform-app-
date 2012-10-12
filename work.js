@@ -13,7 +13,6 @@ function ready() {
 for(var i = 0; I < e. touches.length; i++)
 {
    var touch = touches[i];
-
    var x = touch.clientX;
    var y = touch.clientY;
 
