@@ -1,0 +1,33 @@
+<html>
+<head></head>
+
+<body onload="$('div').load('http://localhost/bbcloud/me.php');">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript">
+
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+
+
+var first = getUrlVars()["result"];
+
+//alert(first);
+
+
+
+
+</script>
+
+<div id="result" >
+vdfvfd
+
+	</div>
+
+
+</body>
+</html>

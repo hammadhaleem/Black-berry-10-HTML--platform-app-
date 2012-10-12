@@ -10,35 +10,34 @@ function ready() {
       var img = document.createElement('img');
       img.ontouchstart=function(e) { 
 
-for(var i = 0; I < e. touches.length; i++)
-{
-   var touch = touches[i];
-   var x = touch.clientX;
-   var y = touch.clientY;
+            for(var i = 0; I < e. touches.length; i++)
+            {
+               var touch = touches[i];
+               var x = touch.clientX;
+               var y = touch.clientY;
 
-   // do something
-}
+               // do something
+            } }
 
-function takePic() {
-  try {
-    blackberry.media.camera.takePic(successCB);
-  } catch(e) {
-    alert("Error in supported: " + e);
-  }
-}
+              function takePic() {
+                try {
+                  blackberry.media.camera.takePic(successCB);
+                } catch(e) {
+                  alert("Error in supported: " + e);
+                }
+              }
 
-function successCB(filePath) {
-  blackberry.media.camera.close();
-  // do something with filePath
-}
+              function successCB(filePath) {
+                blackberry.media.camera.close();
+                // do something with filePath
+              }
 
-function at(){
+          function at(){
 
- alert ("hello ");
-  alert(event.target); 
+           alert ("hello ");
+            alert(event.target); 
 
-  takepic();
+            takepic();
 
-}
-
+          }
 
