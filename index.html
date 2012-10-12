@@ -5,7 +5,9 @@
     <title>Cloud Sync </title>
     <script src="webworks-1.0.2.9.js"></script>
     <script src="work.js"></script>
-    <script type="text/javascript">
+    
+
+    <!--script type="text/javascript">
 
 function uploadSuccess(result) {
   alert("Upload was successful");
@@ -42,7 +44,7 @@ function fileUpload() {
   }
 }
 
-</script>
+</script-->
 
 <!-- Mobile viewport optimized: h5bp.com/viewport -->
      <meta name="viewport" content="width=device-width">
@@ -86,60 +88,24 @@ function fileUpload() {
     </div>
     <div class="container">
       <div class="hero-unit">
-         <hgroup>
-           <h1>Select you Picture ! </h1>
-          
-           <!--h2> <a class="btn btn-primary pull-right" href="#" ontouchstart=" alert(event.target); " >
-                     <b class="icon-home icon-white"></b> Click to listen </a></h2>
-
-
-          <form action="http://api.ocrapiservice.com/1.0/rest/ocr" method="POST" enctype="multipart/form-data">
-            <input type="hidden" name="MAX_FILE_SIZE" value="100000000" />
-          Choose a file to upload: <input name="image" type="file" />
-            <br />
-            <input type="hidden" name="language" value="en" />
-            <input type="hidden" name="apikey" value="esk4RJr2Jn"  />
-
-            <input type="submit" value="Upload File" />
-        </form> 
-
-
-        </hgroup>
+         <hgroup><h1>Select you Picture ! </h1> <hr>
+         <input type="file" name="file" />
+         <button onclick="fileUpload();"> Upload Picture</button>
       </div>
-      <!div class="row">
-        <div class="span4">
-          <h2>Setup Notes</h2>
-           <p>Get your markup, CSS, and JavaScript organized and linked up!</p>
-          <p><a class="btn" href="setup-notes.html">Go there &raquo;</a></p>
-        </div>
-        <div class="span4">
-          <h2>Navbar Examples</h2>
-           <p>Suggestions and code for three ways to setup your navbar:</p>
-            <ul>
-               <li>fixed-top</li>
-               <li>static full-width</li>
-               <li>static inside container</li>
-            </ul>
-          <p><a class="btn" href="navbar-examples.html">Go there &raquo;</a></p>
-       </div>
-        <div class="span4">
-          <h2>Tabs & Pills</h2>
-          <p>Examples utilizing Bootstrap's Tabs & Pills styles and the Tabs JavaScript plugin.</p>
-          <p><a class="btn" href="tabs-pills.html">Go there &raquo;</a></p>
-        </div>
-      </div--><!-- end row 1 -->
+    </div>
 
-      <hr>
-
-
-
-        <input type="file" name="file" />
-
-        <button onclick="fileUpload();"> Upload Picture</button>
-
-
-
-
+     <div class="container">
+      <div class="hero-unit">
+         <hgroup><h1>What's Next  ! </h1> <hr>
+         <ul>
+          <li>Option 1 </li>
+          <li>Option 2</li>
+          <li>Option 3</li>
+          <li>Option 4</li>
+          <li>Option 5</li>
+        </ul>
+      </div>
+    </div>
       <footer>
       <p> Really wonderfull app !! </p>
       </footer>
