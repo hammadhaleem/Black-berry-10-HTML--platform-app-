@@ -1,4 +1,4 @@
-    function ready() {
+function ready() {
          var ele = document.createElement("div");
          ele.innerHTML = "uuid: " + blackberry.identity.uuid;
          document.documentElement.appendChild(ele);
@@ -8,7 +8,7 @@
       }, false);
 
       var img = document.createElement('img');
-img.ontouchstart=function(e) { 
+      img.ontouchstart=function(e) { 
 
 for(var i = 0; I < e. touches.length; i++)
 {
@@ -31,6 +31,15 @@ function takePic() {
 function successCB(filePath) {
   blackberry.media.camera.close();
   // do something with filePath
+}
+
+function at(){
+
+ alert ("hello ");
+  alert(event.target); 
+
+  takepic();
+
 }
 
 
