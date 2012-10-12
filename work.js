@@ -33,4 +33,11 @@ function successCB(filePath) {
   // do something with filePath
 }
 
+function at(){
+
+  takepic();
+  alert(event.target); 
+
+}
+
 
