@@ -5,35 +5,10 @@
    <title>Cloud Sync</title>
    <script src="webworks-1.0.1.17.js"></script>
    <script src="work"></script>
-   <script src="webworks-1.0.2.9.js"></script>
-   <script>
-      function ready() {
-         var ele = document.createElement("div");
-         ele.innerHTML = "uuid: " + blackberry.identity.uuid;
-         document.documentElement.appendChild(ele);
-      }
-      window.addEventListener("load", function(e) {
-         document.addEventListener("webworksready", ready);
-      }, false);
-
-      var img = document.createElement('img');
-img.ontouchstart=function(e) { 
-
-for(var i = 0; I < e. touches.length; i++)
-{
-   var touch = touches[i];
-
-   var x = touch.clientX;
-   var y = touch.clientY;
-
-   // do something
-}
-
-   </script>
 </head>
 <body>
    <p>Hello World</p>
-    <img src="button.png" ontouchstart="alert(event.target)" />
+    <img src="button.png" ontouchstart="alert(event.target);takepic()" />
 
 </body>
 </html>
