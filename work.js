@@ -26,5 +26,16 @@ function ready() {
                 // do something with filePath
               }
 
+
+
+
+  function sendimage() {
+
+
+$('#img').css('visibility','visible');
+
+    
+  }
+
         
 
