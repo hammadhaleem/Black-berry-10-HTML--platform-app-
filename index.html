@@ -47,6 +47,14 @@ function fileUpload() {
 }
 
 </script-->
+<script type="text/javascript">
+function init() {
+  document.getElementById('file_upload_form').onsubmit=function() {
+    document.getElementById('file_upload_form').target = 'upload_target'; //'upload_target' is the name of the iframe
+  }
+}
+window.onload=init;
+</script>
 
     <meta name="viewport" content="width=device-width">
     <link href="css/style.css" rel="stylesheet">
@@ -81,7 +89,7 @@ function fileUpload() {
       <div class="hero-unit">
          <hgroup><h1>Select you Picture ! </h1> <hr>
          <input type="file" name="file" />
-         <button onclick="fileUpload();"> Upload Picture</button>
+         <button class ="btn btn-primary"  onclick="fileUpload();"> Upload Picture</button>
       </div>
    
       <footer>
