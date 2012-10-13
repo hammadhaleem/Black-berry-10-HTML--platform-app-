@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,145 +6,78 @@
     <title>Cloud Sync </title>
     <script src="webworks-1.0.2.9.js"></script>
     <script src="work.js"></script>
-    <script src="js/jquery-1.7.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" href="jquery.mobile-1.1.0.min.css" />
-    <script src="jquery.mobile-1.1.0.min.js"></script>
+<!-- Mobile viewport optimized: h5bp.com/viewport -->
+     <meta name="viewport" content="width=device-width">
 
-    <meta name="viewport" content="width=device-width">
+<!-- Main stylesheet imports bootstrap css and adds custom -->
     <link href="css/style.css" rel="stylesheet">
-    <script src="js/modernizr-2.5.3.min.js"></script>
+
+<!-- Modernizr for browser feature-checking 
+         + HTML5shiv (included in modernizr) see modernizr.com -->
+   <script src="js/modernizr-2.5.3.min.js"></script>
+
+<!-- Fav and touch icons -->
+      <!-- alternatively, remove these lines and place icons
+            directly in the site parent folder 
+            mathiasbynens.be/notes/touch-icons -->
     <link rel="shortcut icon" href="img/favicon.ico">
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
-    <script type="text/javascript">
 
-    function ready1() {
-
-                      $("#upload").click(function() {
-
-                upload();
-
-              });
-
-           
-        }
-
-
-     function upload() {
-            try { // alert("in");
-            alert(blackberry);
-            function onInitFs(fs) {
-                           //console.log('Opened file system: ' + fs.name);
-            } 
-
-//window.requestFileSystem(window.TEMPORARY, 5*1024*1024  onInitFs, errorHandler);
-//alert(window.requestFileSystem);  
-blackberry.io.filetransfer.upload(
-                    "C:\\Users\\application\\Desktop\\bn.gif",
-                    "http://10.137.251.215:8080/upload", //use address of server where you are uploading
-                    function (result) {
-                        alert("Upload successful");
-                        console.log("Bytes sent: " + result.bytesSent);
-                        console.log("Response code: " + result.responseCode);
-                        console.log("Response: " + result.response);
-                    },
-                    function (result) {
-                        alert("Upload failure");
-                        alert(result.source);
-                        console.log("Error code: " + result.code);
-                        console.log("Source: " + result.source);
-                        console.log("Target: " + result.target);
-                        console.log("HTTP Status: " + result.http_status);
-                    }
-                    ,
-                    {
-                        fileKey : "file",
-                        mimeType : "image/jpeg",
-                        chunkedMode : "true",
-                        chunkedSize : 1024
-                    }
-                );
-            }
-            catch(e) {
-                alert("Exception in upload: " + e);
-            }
-        }
-
-           window.addEventListener("load", function () {
-            document.addEventListener("webworksready", ready);
-        }, false);
-
-
-
-
-
-
-</script>
-<script>/*
-  function handleFileSelect(evt) {
-    var files = evt.target.files; // FileList object
-
-    // files is a FileList of File objects. List some properties.
-    var output = [];
-    for (var i = 0, f; f = files[i]; i++) {
-      output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
-                  f.size, ' bytes, last modified: ',
-                  f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a',
-                  '</li>');
-    }
-    document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
-  }
-
-  document.getElementById('files').addEventListener('change', handleFileSelect, false); */
-</script>
-</head>
   <body>
 
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-          <a class="" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
+          <a class="brand" href="index.html">Back</a>
           <div class="nav-collapse">
-            <ul class="nav">
-              <li class="active"><a href="index.html">Home</a></li>
-              <li class="active"><a href="about.html">About</a></li>
-              <li class="active"><a href="privacy.html">Privacy</a></li>
+             <ul class="nav">
+              <li class="active"><a href="index.html">home</a></li>
+              <li class="active"><a href="about.html">about</a></li>
+              <li class="active"><a href="privacy.html">privacy</a></li>
             </ul> 
           </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
-
-     <div class="container">
-            <div class=" " style="">
-              <br><a href ="http://engineerinme.com/apps/sdk/gettext.php?uid=11" >hello </a>
-              <h1>Lets Start with the journey !! </h1> <br/> <br>
+    <div class="container">
+      <div class="hero-unit">
+         <hgroup>
+          <div class=" " style="">
+              <br><h1>Lets Start with the journey !! </h1> <br/> <br>
                      <form action="http://engineerinme.com/apps/sdk/gettext.php" method="POST" enctype="multipart/form-data">
                           <input type="hidden" name="MAX_FILE_SIZE" value="100000000" />
                           <!--<button id="upload">Upload File</button><br />-->
                           <input type="hidden" name="language" value="en" />
                           <input type="hidden" name="apikey" value="esk4RJr2Jn"  />
                           <input type="file" name="file" />
-                          <br/> <button name="submit" value="Submit" > Submit </button>
+                          <button class="btn btn-info dropdown-toggle" name="submit" value="Submit" >Continue !  </button>
                       </form> 
-            </div>
-                <footer>
-                <p> Really wonderfull app !! </p>
-                </footer>
+          </div>
+          
+        </hgroup>
+      </div>
+      
+
+      <hr>
 
 
-    </div>
+      <footer>
+      <p> Really wonderfull app !! </p>
+      </footer>
     </div> <!-- /container -->
 
 <!-- ==============================================
        JavaScript below!                                             -->
+
+<!-- jQuery via Google + local fallback, see h5bp.com -->
+   <script src="js/jquery-1.7.1.min.js"></script>
+   <!--script>window.jQuery || document.write('<script src="js/jquery-1.7.1.min.js"><\/script>')</script-->
+
+<!-- Bootstrap JS: compiled and minified -->
+    <script src="js/bootstrap.min.js"></script>
 
   </body>
 </html>
