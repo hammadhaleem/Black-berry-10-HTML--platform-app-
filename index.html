@@ -77,9 +77,41 @@ function stopUpload(success){
       return true;   
 }
 //-->
+
+function getCookie(c_name)
+{
+var i,x,y,ARRcookies=document.cookie.split(";");
+for (i=0;i<ARRcookies.length;i++)
+{
+  x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+  y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+  x=x.replace(/^\s+|\s+$/g,"");
+  if (x==c_name)
+    {
+    return unescape(y);
+    }
+  }
+}
+
+function checkCookie()
+{
+var result=getCookie("result");
+alert(result);
+if (result!=null && result!="")
+  {
+  alert("Welcome again " + result);
+  }
+else 
+  {
+  result=prompt("Please enter your name:","");
+  
+  }
+}
+
+
 </script>   
 </head>
-  <body>
+  <body onload="checkCookie();">
 
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">

@@ -28,7 +28,7 @@ $("form").submit(function () { alert ("end"); return false;  });
 
 <body>
 
-<form id="form" method="POST" action="http://engineerinme.com/apps/sdk/gettext.php" enctype="multipart/form-data" >
+<form id="form" method="POST" action="http://engineerinme.com/apps/sdk/gettext.php" enctype="multipart/form-data" target="frame_tar" >
 	<input type="file" name="image" id="image" />
 
 
@@ -37,6 +37,7 @@ $("form").submit(function () { alert ("end"); return false;  });
 
 
 </form>
+<iframe src="#" name="frame_tar" id="frame_tar" style="width:0;height:0;border:0px solid #fff;"></iframe>
 
 </body>
 
