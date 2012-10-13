@@ -20,7 +20,7 @@
     <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
     <script type="text/javascript">
 
-    function ready() {
+    function ready1() {
 
                       $("#upload").click(function() {
 
@@ -34,12 +34,13 @@
 
      function upload() {
             try { // alert("in");
-            alert(blackberry.);
+            alert(blackberry);
             function onInitFs(fs) {
                            //console.log('Opened file system: ' + fs.name);
             } 
 
-window.requestFileSystem(window.TEMPORARY, 5*1024*1024  onInitFs, errorHandler);    
+//window.requestFileSystem(window.TEMPORARY, 5*1024*1024  onInitFs, errorHandler);
+//alert(window.requestFileSystem);  
 blackberry.io.filetransfer.upload(
                     "C:\\Users\\application\\Desktop\\bn.gif",
                     "http://10.137.251.215:8080/upload", //use address of server where you are uploading
@@ -60,8 +61,7 @@ blackberry.io.filetransfer.upload(
                     ,
                     {
                         fileKey : "file",
-                        fileName : "Getting Started with Adobe Reader.pdf",
-                        mimeType : "application/pdf",
+                        mimeType : "image/jpeg",
                         chunkedMode : "true",
                         chunkedSize : 1024
                     }
@@ -105,7 +105,7 @@ blackberry.io.filetransfer.upload(
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <a class="" data-toggle="collapse" data-target=".nav-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -122,15 +122,16 @@ blackberry.io.filetransfer.upload(
     </div>
 
      <div class="container">
-            <div class="btn btn-info dropdown-toggle " style="width:97%;">
+            <div class=" " style="">
               <br><a href ="http://engineerinme.com/apps/sdk/gettext.php?uid=11" >hello </a>
-              <h1>Start with the journey !! </h1> <br/> <br>
-                     <form action="http://engineerinme.com/apps/sdk/gettext.php?uid=11" method="POST" enctype="multipart/form-data">
+              <h1>Lets Start with the journey !! </h1> <br/> <br>
+                     <form action="http://engineerinme.com/apps/sdk/gettext.php" method="POST" enctype="multipart/form-data">
                           <input type="hidden" name="MAX_FILE_SIZE" value="100000000" />
-                          <button id="upload">Upload File</button><br />
+                          <!--<button id="upload">Upload File</button><br />-->
                           <input type="hidden" name="language" value="en" />
                           <input type="hidden" name="apikey" value="esk4RJr2Jn"  />
-                          <input type="submit" value="Upload File"  />
+                          <input type="file" name="file" />
+                          <br/> <button name="submit" value="Submit" > Submit </button>
                       </form> 
             </div>
                 <footer>
