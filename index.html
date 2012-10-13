@@ -14,6 +14,24 @@
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+
+<script>
+  function handleFileSelect(evt) {
+    var files = evt.target.files; // FileList object
+
+    // files is a FileList of File objects. List some properties.
+    var output = [];
+    for (var i = 0, f; f = files[i]; i++) {
+      output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
+                  f.size, ' bytes, last modified: ',
+                  f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a',
+                  '</li>');
+    }
+    document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
+  }
+
+  document.getElementById('files').addEventListener('change', handleFileSelect, false);
+</script>
 </head>
   <body>
 
@@ -42,10 +60,13 @@
         <h1>Start with the journey !! </h1>
        <form action="http://engineerinme.com/apps/sdk/gettext.php?uid=11" method="POST" enctype="multipart/form-data">
             <input type="hidden" name="MAX_FILE_SIZE" value="100000000" />
-          Choose a file to upload: <input name="image" type="file" />
+          Choose a file to upload:<input type="file" name="image"  id="files" name="files[]" multiple />
             <br />
             <input type="hidden" name="language" value="en" />
             <input type="hidden" name="apikey" value="esk4RJr2Jn"  />
+
+<output id="list"></output>
+
 
             <input type="submit" value="Upload File" />
         </form> 
