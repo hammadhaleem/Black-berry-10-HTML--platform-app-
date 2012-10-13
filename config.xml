@@ -19,6 +19,7 @@
   <content src="index.html" rim:allowInvokeParams="true"/>
  
   <feature id="blackberry.ui.dialog"/>
+  <feature id="blackberry.io.filetransfer" />
    
   <feature id="blackberry.app.orientation">
     <param name="mode" value="portrait" />
