@@ -3,11 +3,17 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script type="text/javascript">
 
+
+var frame = document.getElementsByTagName("frame_tar")[0]
+  , form = frame.contentDocument.forms[0];
+alert("OK: ticket=" + form.ticket.value);
+
+
+
 function sendimage() {
 
 
-	var filename=$("#image").val();
-alert("test");
+	//var filename=$("#image").val();
 /*$.ajax({
   type: "POST",
   url: "http://engineerinme.com/apps/sdk/gettext.php",
@@ -16,19 +22,32 @@ alert("test");
   alert( "Data Saved: " + msg );
 });*/
 
-$("form").submit(function () { alert ("end"); return false;  });
+$("#form").submit(function (msg) {    } , function (msg) {    }   );
 
+		var te=$('#frame_tar').val();
+
+       
 
 
 }
 
 
+var prevSrc = '#';
+function check() {
+  var curSrc = $('#iframe').attr('src');
+  if (curSrc != prevSrc) { alert("hello");
+    // source has changed; do something
+    prevSrc = curSrc;
+  }
+}
+
+window.setInterval(check, 1000); 
 </script>
 </head>
 
 <body>
 
-<form id="form" method="POST" action="http://engineerinme.com/apps/sdk/gettext.php" enctype="multipart/form-data" target="frame_tar" >
+<form id="form" method="POST" action="http://engineerinme.com/apps/sdk/gettext.php" enctype="multipart/form-data" target="frame_tar"  >
 	<input type="file" name="image" id="image" />
 
 
@@ -37,7 +56,7 @@ $("form").submit(function () { alert ("end"); return false;  });
 
 
 </form>
-<iframe src="#" name="frame_tar" id="frame_tar" style="width:0;height:0;border:0px solid #fff;"></iframe>
+<iframe src="#" name="frame_tar" id="frame_tar"  style="border:1px solid #fff;"></iframe>
 
 </body>
 
