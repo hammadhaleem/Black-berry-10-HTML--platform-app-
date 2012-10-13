@@ -1,7 +1,7 @@
 function ready() {
          var ele = document.createElement("div");
          ele.innerHTML = "uuid: " + blackberry.identity.uuid;
-         document.documentElement.appendChild(ele);
+        //document.documentElement.appendChild(ele);
       }
       window.addEventListener("load", function(e) {
          document.addEventListener("webworksready", ready);
@@ -19,25 +19,12 @@ function ready() {
                // do something
             } }
 
-              function takePic() {
-                try {
-                  blackberry.media.camera.takePic(successCB);
-                } catch(e) {
-                  alert("Error in supported: " + e);
-                }
-              }
+          
 
               function successCB(filePath) {
                 blackberry.media.camera.close();
                 // do something with filePath
               }
 
-          function at(){
-
-           alert ("hello ");
-            alert(event.target); 
-
-            takepic();
-
-          }
+        
 

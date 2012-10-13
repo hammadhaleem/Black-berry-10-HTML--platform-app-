@@ -7,6 +7,10 @@
     <script src="work.js"></script>
     <script src="js/jquery-1.7.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="jquery.mobile-1.1.0.min.css" />
+    <script src="jquery.mobile-1.1.0.min.js"></script>
+
     <meta name="viewport" content="width=device-width">
     <link href="css/style.css" rel="stylesheet">
     <script src="js/modernizr-2.5.3.min.js"></script>
@@ -15,47 +19,70 @@
     <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
     <script type="text/javascript">
-     <script type="text/javascript">
 
-function uploadSuccess(result) {
-  alert("Upload was successful");
-  console.log("Bytes sent: " + result.bytesSent);
-  console.log("Response code: " + result.responseCode);
-  console.log("Response: " + result.response);
-}
+    function ready() {
 
-function uploadError(result) {
-  alert("Upload failed");
-  console.log("Error code: " + result.code);
-  console.log("Source: " + result.source);
-  console.log("Target: " + result.target);
-  console.log("HTTP Status: " + result.https_status);
-}
+                      $("#upload").click(function() {
 
-function fileUpload() {
-  var parameters, options;
-  try {
-    parameters = { app : "webworks" };
-    options = {
-      fileKey : "file",
-      fileName : "blackberry.jpg",
-      mimeType : "image/jpeg",
-      params : parameters,
-      chunkedMode : true,
-      chunkSize : 1024
-    };
-    blackberry.io.filetransfer.upload("/accounts/1000/shared/camera/image_123.jpg", "http://engineerinme.com/apps/sdk/gettext.php", uploadSuccess, uploadError, options);
-  } catch(e) {
-    alert("Exception in fileUpload: " + e);
-  }
-}
+                upload();
+
+              });
+
+           
+        }
+
+
+     function upload() {
+            try { // alert("in");
+            alert(blackberry.);
+            function onInitFs(fs) {
+                           //console.log('Opened file system: ' + fs.name);
+            } 
+
+window.requestFileSystem(window.TEMPORARY, 5*1024*1024  onInitFs, errorHandler);    
+blackberry.io.filetransfer.upload(
+                    "C:\\Users\\application\\Desktop\\bn.gif",
+                    "http://10.137.251.215:8080/upload", //use address of server where you are uploading
+                    function (result) {
+                        alert("Upload successful");
+                        console.log("Bytes sent: " + result.bytesSent);
+                        console.log("Response code: " + result.responseCode);
+                        console.log("Response: " + result.response);
+                    },
+                    function (result) {
+                        alert("Upload failure");
+                        alert(result.source);
+                        console.log("Error code: " + result.code);
+                        console.log("Source: " + result.source);
+                        console.log("Target: " + result.target);
+                        console.log("HTTP Status: " + result.http_status);
+                    }
+                    ,
+                    {
+                        fileKey : "file",
+                        fileName : "Getting Started with Adobe Reader.pdf",
+                        mimeType : "application/pdf",
+                        chunkedMode : "true",
+                        chunkedSize : 1024
+                    }
+                );
+            }
+            catch(e) {
+                alert("Exception in upload: " + e);
+            }
+        }
+
+           window.addEventListener("load", function () {
+            document.addEventListener("webworksready", ready);
+        }, false);
+
+
+
+
+
 
 </script>
-
-    
-
-
-<script>
+<script>/*
   function handleFileSelect(evt) {
     var files = evt.target.files; // FileList object
 
@@ -70,7 +97,7 @@ function fileUpload() {
     document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
   }
 
-  document.getElementById('files').addEventListener('change', handleFileSelect, false);
+  document.getElementById('files').addEventListener('change', handleFileSelect, false); */
 </script>
 </head>
   <body>
@@ -100,8 +127,7 @@ function fileUpload() {
               <h1>Start with the journey !! </h1> <br/> <br>
                      <form action="http://engineerinme.com/apps/sdk/gettext.php?uid=11" method="POST" enctype="multipart/form-data">
                           <input type="hidden" name="MAX_FILE_SIZE" value="100000000" />
-                       <input name="image" type="file" ontouchstart="fileUpload();" />
-                          <br />
+                          <button id="upload">Upload File</button><br />
                           <input type="hidden" name="language" value="en" />
                           <input type="hidden" name="apikey" value="esk4RJr2Jn"  />
                           <input type="submit" value="Upload File"  />
