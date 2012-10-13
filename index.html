@@ -53,6 +53,25 @@ function fileUpload() {
 </script>
 
     
+
+
+<script>
+  function handleFileSelect(evt) {
+    var files = evt.target.files; // FileList object
+
+    // files is a FileList of File objects. List some properties.
+    var output = [];
+    for (var i = 0, f; f = files[i]; i++) {
+      output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
+                  f.size, ' bytes, last modified: ',
+                  f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a',
+                  '</li>');
+    }
+    document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
+  }
+
+  document.getElementById('files').addEventListener('change', handleFileSelect, false);
+</script>
 </head>
   <body>
 
@@ -76,9 +95,6 @@ function fileUpload() {
       </div>
     </div>
 
-     <div class="container">
-
-
             <div class="btn btn-primary" style="width:97%;">
               <br>
               <h1>Start with the journey !! </h1> <br/> <br>
@@ -96,7 +112,8 @@ function fileUpload() {
                 <p> Really wonderfull app !! </p>
                 </footer>
 
-          </div>
+
+    </div>
     </div> <!-- /container -->
 
 <!-- ==============================================
