@@ -5,57 +5,8 @@
     <title>Cloud Sync </title>
     <script src="webworks-1.0.2.9.js"></script>
     <script src="work.js"></script>
-
-
-    
-
-    <!--script type="text/javascript">
-
-function uploadSuccess(result) {
-  alert("Upload was successful");
-  console.log("Bytes sent: " + result.bytesSent);
-  console.log("Response code: " + result.responseCode);
-  console.log("Response: " + result.response);
-}
-
-function uploadError(result) {
-  alert("Upload failed");
-  console.log("Error code: " + result.code);
-  console.log("Source: " + result.source);
-  console.log("Target: " + result.target);
-  console.log("HTTP Status: " + result.https_status);
-}
-
-function fileUpload() {
-  var parameters, options;
-  try {
-    parameters = { app : "webworks" };
-    options = {
-      fileKey : "file",
-      fileName : "blackberry.jpg",
-      mimeType : "image/jpeg",
-      params : parameters,
-      chunkedMode : true,
-      chunkSize : 1024
-    };
-
-    alert("test1");
-    blackberry.io.filetransfer.upload();
-  } catch(e) {
-    alert("Exception in fileUpload: " + e);
-  }
-}
-
-</script-->
-<script type="text/javascript">
-function init() {
-  document.getElementById('file_upload_form').onsubmit=function() {
-    document.getElementById('file_upload_form').target = 'upload_target'; //'upload_target' is the name of the iframe
-  }
-}
-window.onload=init;
-</script>
-
+    <script src="js/jquery-1.7.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <meta name="viewport" content="width=device-width">
     <link href="css/style.css" rel="stylesheet">
     <script src="js/modernizr-2.5.3.min.js"></script>
@@ -63,63 +14,8 @@ window.onload=init;
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
-	<script language="javascript" type="text/javascript">
-<!--
-function startUpload(){
-      document.getElementById('f1_upload_process').style.visibility = 'visible';
-      document.getElementById('f1_upload_form').style.visibility = 'hidden';
-      return true;
-}
-
-function stopUpload(success){
-      var result = '';
-      if (success == 1){
-         result = '<span class="msg">The file was uploaded successfully!<\/span><br/><br/>';
-      }
-      else {
-         result = '<span class="emsg">There was an error during file upload!<\/span><br/><br/>';
-      }
-      document.getElementById('f1_upload_process').style.visibility = 'hidden';
-      document.getElementById('f1_upload_form').innerHTML = result + '<label>File: <input name="image" type="file" size="30" /><\/label><label><input type="submit" name="submitBtn" class="sbtn" value="Upload" /><\/label>';
-      document.getElementById('f1_upload_form').style.visibility = 'visible';      
-      return true;   
-}
-//-->
-
-function getCookie(c_name)
-{
-var i,x,y,ARRcookies=document.cookie.split(";");
-for (i=0;i<ARRcookies.length;i++)
-{
-  x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
-  y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
-  x=x.replace(/^\s+|\s+$/g,"");
-  if (x==c_name)
-    {
-    return unescape(y);
-    }
-  }
-}
-
-function checkCookie()
-{
-var result=getCookie("result");
-alert(result);
-if (result!=null && result!="")
-  {
-  alert("Welcome again " + result);
-  }
-else 
-  {
-  result=prompt("Please enter your name:","");
-  
-  }
-}
-
-
-</script>   
 </head>
-  <body onload="checkCookie();">
+  <body>
 
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
@@ -140,29 +36,20 @@ else
         </div>
       </div>
     </div>
-    <div class="container">
+
+     <div class="container">
       <div class="hero-unit">
-         <hgroup><h1>Select you Picture ! </h1> <hr>
-<<<<<<< HEAD
-         <input type="file" name="file" />
-         <button class ="btn btn-primary"  onclick="fileUpload();"> Upload Picture</button>
-=======
-         <form action="http://engineerinme.com/apps/sdk/gettext.php" method="post" enctype="multipart/form-data" target="upload_target" onsubmit="startUpload();" >
-                     <p id="f1_upload_process">Loading...<br/><img src="test/loader.gif" /><br/></p>
-                     <p id="f1_upload_form" align="center"><br/>
-                         <label>File:  
-                              <input name="image" type="file" size="30" />
-                         </label>
-                         <label>
-                             <input type="submit" name="submitBtn" class="sbtn" value="Upload" />
-                         </label>
-                     </p>
-                     
-                     <iframe id="upload_target" name="upload_target" src="http://engineerinme.com/apps/sdk/gettext.php" style="width:0;height:0;border:0px solid #fff;"></iframe>
-                 </form>
->>>>>>> 4a73745d3579a503e391bc7514d722eb3f1d19be
+        <h1>Start with the journey !! </h1>
+       <form action="http://engineerinme.com/apps/sdk/gettext.php?uid=11" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="MAX_FILE_SIZE" value="100000000" />
+          Choose a file to upload: <input name="image" type="file" />
+            <br />
+            <input type="hidden" name="language" value="en" />
+            <input type="hidden" name="apikey" value="esk4RJr2Jn"  />
+
+            <input type="submit" value="Upload File" />
+        </form> 
       </div>
-   
       <footer>
       <p> Really wonderfull app !! </p>
       </footer>
@@ -172,14 +59,6 @@ else
 
 <!-- ==============================================
        JavaScript below!                                             -->
-
-<!-- jQuery via Google + local fallback, see h5bp.com -->
-	
-   <script src="js/jquery-1.7.1.min.js"></script>
-   <!--script>window.jQuery || document.write('<script src="js/jquery-1.7.1.min.js"><\/script>')</script-->
-
-<!-- Bootstrap JS: compiled and minified -->
-    <script src="js/bootstrap.min.js"></script>
 
   </body>
 </html>
