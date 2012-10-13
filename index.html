@@ -5,22 +5,22 @@
     <meta charset="utf-8">
     <title>Cloud Sync </title>
     <script src="webworks-1.0.2.9.js"></script>
-    <script src="work.js"></script>
+    <!--script src="work.js"></script-->
 
 <!-- Mobile viewport optimized: h5bp.com/viewport -->
      <meta name="viewport" content="width=device-width">
      <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0" />
-    <link rel="stylesheet" href="test/css/style.css"/>
-        <link href="http://mobifreaks.com/wp-content/demos/demo.css" rel="stylesheet" type="text/css" />
+     <link rel="stylesheet" href="test/css/style.css"/>
+     <link href="http://mobifreaks.com/wp-content/demos/demo.css" rel="stylesheet" type="text/css" />
 
 <!-- Main stylesheet imports bootstrap css and adds custom -->
-    <link href="css/style.css" rel="stylesheet">
+   <link href="css/style.css" rel="stylesheet">
 
 <!-- Modernizr for browser feature-checking 
          + HTML5shiv (included in modernizr) see modernizr.com -->
    <script src="js/modernizr-2.5.3.min.js"></script>
-    <script src="js/jquery-1.7.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+   <script src="js/jquery-1.7.1.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
 
 <!-- Fav and touch icons -->
       <!-- alternatively, remove these lines and place icons
@@ -31,167 +31,72 @@
     <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
 
+  </head>
   <body>
 
-
-
-
-      <div class="wrap">
-    <header class="header">
-      <div class="logo"><a href="index.html"><h1 style="color:black;"> BB-Cloud </h1></a></div>
-      <!--<div class="menu-but"><a href="#menu"><img src="test/images/menu.png"/></a></div>-->
-      <br class="clearfix"/>
-    </header>
-      <hr class="separator"/>
-      
-    <div class="container">
-        <!-- Image Slider -->
-        <ul id="slider" class="slider">
-            <li><img src="test/images/stock/6.jpg" alt="" /></li>
-            <li><img src="test/images/stock/2.jpg" alt="" /></li>
-            <li><img src="test/images/stock/3.jpg" alt="" /></li>
-            <li><img src="test/images/stock/4.jpg" alt="" /></li>
-            <li><img src="test/images/stock/5.jpg" alt="" /></li>
-            <li><img src="test/images/stock/1.jpg" alt="" /></li>
-          </ul>
-      <div class="content">
-        <h2>Welcome</h2>
-        <p>Good news, everyone! I've taught the toaster to feel love! You guys go on without me! I'm going to go… look for more stuff to steal! Oh right.</p>
-      </div>
-      <hr class="separator"/>
-      <aside>
-        <a name="menu"></a>
-        <ul class="menu">
-          <li class="icon home"><a href="index.html">Home</a></li>
-          <li class="icon info"><a href="test/about.html">About</a></li>
-          <li class="icon gear"><a href="test/services.html">Services</a></li>
-          <li class="icon bubble"><a href="test/contact.html">Contact Us</a></li>
-          <li class="icon add"><a href="test/referance.html">Referance</a></li>
-        </ul>
-      </aside>
-    </div>
-    <hr class="separator"/>
-    <footer class="footer">
-      <p>&copy; 2012 YourDomain.com &bull; All Rights Reserved</p>
-      <div class="social">
-        <a href="#"><img src="test/images/facebook.png" alt=""></a>
-        <a href="#"><img src="test/images/twitter.png" alt=""></a>
-        <a href="#"><img src="test/images/gplus.png" alt=""></a>
-      </div>
-    </footer>
-    <div class="copy">Design by <a href="#">Mobifreaks</a>.com</div>
-    </div>
-    <script src="test/js/jquery.min.js"></script>
-    <script src="test/js/slider.min.js"></script>
-    <script>
-    $(function () {
-    
-      // Slideshow 1
-      $("#slider").responsiveSlides({
-        maxwidth: 800,
-        speed: 800
-      });
-    
-    });
-    </script>   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   <!-- <div class="navbar navbar-fixed-top">
+    <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-          <a class="brand" href="index.html">Home</a>
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
           <div class="nav-collapse">
-             <ul class="nav">
-              <li class="active"><a href="index.html">home</a></li>
-              <li class="active"><a href="about.html">about</a></li>
-              <li class="active"><a href="privacy.html">privacy</a></li>
+            <ul class="nav">
+              <li class="active"><a href="index.html">Home</a></li>
+              <li class="active"><a href="about.html">About</a></li>
+              <li class="active"><a href="privacy.html">Privacy</a></li>
             </ul> 
           </div><!--/.nav-collapse -->
-      <!--  </div>
+        </div>
       </div>
     </div>
-    <div class="container">
+
+     <div class="container">
       <div class="hero-unit">
          <hgroup>
           <div class=" " style="">
-              <br><h1>Lets Start with the journey !! </h1> <br/> <br>
+
+            <input type="file" id="files" name="files[]" multiple />
+<output id="list"></output>
+
+<script>
+  function handleFileSelect(evt) {
+    var files = evt.target.files; // FileList object
+
+    // files is a FileList of File objects. List some properties.
+    var output = [];
+    for (var i = 0, f; f = files[i]; i++) {
+      output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
+                  f.size, ' bytes, last modified: ',
+                  f.lastModifiedDate ? f.lastModifiedDate.toLocaleDateString() : 'n/a',
+                  '</li>');
+    }
+    document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
+  }
+
+  document.getElementById('files').addEventListener('change', handleFileSelect, false);
+</script>
+
+
+              <br><h1>Text On The Go !! </h1> <br/> <br>
                      <form action="http://engineerinme.com/apps/sdk/gettext.php" method="POST" enctype='multipart/form-data'>
                           <input type="hidden" name="MAX_FILE_SIZE" value="100000000" />
                           <!--<button id="upload">Upload File</button><br />-->
-                          <!--<input type="hidden" name="language" value="en" />
+                          <input type="hidden" name="language" value="en" />
                           <input type="hidden" name="apikey" value="esk4RJr2Jn"  />
                           <input type="file" name="image" />
                           <div id="img1" style="visibility: hidden; "> <img src="loader.gif"> </div>
-                          <button class="btn btn-info dropdown-toggle" name="submit" onclick="$('#img1').css('visibility','visible');" style="padding:15px;" value="Submit" >
+                          <button class="btn btn-info dropdown-toggle" name="submit" onclick="$('#img1').css('visibility','visible');" style=padding:15px;" value="Submit" >
                           
                           <h2>Continue !  </h2></button>
                       </form> 
           </div>
 
 
-          <center><hr/><h1>OR </h1><hr/></center>
-           <div class=" " style="">
-              <br><h1>Store a record for an already filled up form   </h1> <br/> <br>
-                     <form action="http://engineerinme.com/apps/sdk/form/index.php" method="POST" enctype="multipart/form-data">
-                          <input type="hidden" name="MAX_FILE_SIZE" value="100000000" />
-                          <!--<button id="upload">Upload File</button><br />-->
-                          <!--<input type="hidden" name="language" value="en" />
-                          <input type="hidden" name="apikey" value="esk4RJr2Jn"  />
-                          <input type="file" name="file" />
-                          <div id="img2" style="visibility: hidden; "> <img src="loader.gif"> </div>
-                          <button class="btn btn-info dropdown-toggle" name="submit" onclick="$('#img2').css('visibility','visible');" style="padding:15px;" value="Submit" >
-                          
-                          <h2>Continue !  </h2> </button>
-                      </form> 
-          </div>
           
+          </div  
         </hgroup>
       </div>
       

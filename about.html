@@ -8,94 +8,86 @@
 
 <!-- Mobile viewport optimized: h5bp.com/viewport -->
      <meta name="viewport" content="width=device-width">
-
-<!-- Main stylesheet imports bootstrap css and adds custom -->
-    <link href="css/style.css" rel="stylesheet">
-
-<!-- Modernizr for browser feature-checking 
-         + HTML5shiv (included in modernizr) see modernizr.com -->
-   <script src="js/modernizr-2.5.3.min.js"></script>
-
-<!-- Fav and touch icons -->
-      <!-- alternatively, remove these lines and place icons
-            directly in the site parent folder 
-            mathiasbynens.be/notes/touch-icons -->
-    <link rel="shortcut icon" href="img/favicon.ico">
-    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
-
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css"/>
+        <link href="http://mobifreaks.com/wp-content/demos/demo.css" rel="stylesheet" type="text/css" />
+  </head>
   <body>
 
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="index.html">Back</a>
-          <div class="nav-collapse">
-             <ul class="nav">
-              <li class="active"><a href="index.html">Home</a></li>
-              <li class="active"><a href="about.html">About</a></li>
-              <li class="active"><a href="privacy.html">Privacy</a></li>
-            </ul> 
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
+    <div class="wrap">
+    <header class="header">
+      <div class="logo"><a href="index.html"><img src="images/logo.png" alt=""/></a></div>
+      <div class="menu-but"><a href="#menu"><img src="images/menu.png"/></a></div>
+      <br class="clearfix"/>
+    </header>
+    <hr class="separator"/> 
     <div class="container">
-     <div class="btn btn-info dropdown-toggle" style="width:97%;">
-         <hgroup>
-           <h1>About </h1> <br/> 
-            <p><h2>This is a very useful set of tools !! </h2> 
-              <img src="http://engineerinme.com/apps/sdk/test/images/bbcloud.jpg"></p>
-        </hgroup>
+      <div class="content">
+        <article>
+        <h1>About</h1>
+        <p>Developed by BB Cloud at BlackBerry Delhi HackJam, 2012.</p>
+        <blockquote><p>Developing is always fun, but when you develops continuously for two days,then it's more than just fun. It's extend of awesomeness. </p></blockquote>
+        <p></p>
+<h4>The Developers</h4>
+<p>Hammad Haleem.</p>
+<p>Pankaj Kumar Sharma</p>
+<p>Syed Saad Hussain</p>
+<p>Vipul Nayyar</p>
+        </article>
       </div>
-      <!--div class="row">
-        <div class="span4">
-          <h2>Setup Notes</h2>
-           <p>Get your markup, CSS, and JavaScript organized and linked up!</p>
-          <p><a class="btn" href="setup-notes.html">Go there &raquo;</a></p>
-        </div>
-        <div class="span4">
-          <h2>Navbar Examples</h2>
-           <p>Suggestions and code for three ways to setup your navbar:</p>
-            <ul>
-               <li>fixed-top</li>
-               <li>static full-width</li>
-               <li>static inside container</li>
-            </ul>
-          <p><a class="btn" href="navbar-examples.html">Go there &raquo;</a></p>
-       </div>
-        <div class="span4">
-          <h2>Tabs & Pills</h2>
-          <p>Examples utilizing Bootstrap's Tabs & Pills styles and the Tabs JavaScript plugin.</p>
-          <p><a class="btn" href="tabs-pills.html">Go there &raquo;</a></p>
-        </div>
-      </div--><!-- end row 1 -->
+      <hr class="separator"/>
+      <aside>
+        <a name="menu"></a>
+        <ul class="menu">
+          <li class="icon home"><a href="index.html">Home</a></li>
+          <li class="icon info"><a href="about.html">About</a></li>
+          <li class="icon gear"><a href="services.html">Services</a></li>
+          <li class="icon bubble"><a href="contact.html">Contact Us</a></li>
+          <li class="icon add"><a href="referance.html">Referance</a></li>
+        </ul>
+      </aside>
+    </div>
+    <hr class="separator"/>
+    <footer class="footer">
+      <div class="social">
+        <a href="#"><img src="images/facebook.png" alt=""></a>
+        <a href="#"><img src="images/twitter.png" alt=""></a>
+        <a href="#"><img src="images/gplus.png" alt=""></a>
+      </div>
+    </footer>
+    
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/slider.min.js"></script>
+    <script>
+    $(function () {
+    
+      // Slideshow 1
+      $("#slider").responsiveSlides({
+        maxwidth: 800,
+        speed: 800
+      });
+    
+    });
+    </script> 
+<!--
+  Author Details
+  ==============
 
-      <hr>
+  Author: Mobifreaks
+  Author URL: http://mobifreaks.com
 
+  Attribution( is must on every page, where this work is used. should be visible to naked eye and Search engine bot[ means should not use noindex, nofollow relations ]):
 
-      <footer>
-      <p> Really wonderfull app !! </p>
-      </footer>
+  // a healty attribution looks like following
+  <a href="http://mobifreaks.com" target="_blank">Design by Mobifreaks</a>
 
+  License: Creative Commons Attribution 3.0 Unported
+  License URL: http://creativecommons.org/licenses/by/3.0/
 
-    </div> <!-- /container -->
+  if any regards of infringement, may lead to lawsuit under Digital Millennium Copyright Act (DMCA)
 
-<!-- ==============================================
-       JavaScript below!                                             -->
-
-<!-- jQuery via Google + local fallback, see h5bp.com -->
-   <script src="js/jquery-1.7.1.min.js"></script>
-   <!--script>window.jQuery || document.write('<script src="js/jquery-1.7.1.min.js"><\/script>')</script-->
-
-<!-- Bootstrap JS: compiled and minified -->
-    <script src="js/bootstrap.min.js"></script>
-
+  For Attribution removal request. please consider contacting us through http://mobifreaks.com/feedback/ or mail us at support[at]mobifreaks.com
+ -->
   </body>
 </html>
