@@ -63,6 +63,29 @@ window.onload=init;
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+	<script language="javascript" type="text/javascript">
+<!--
+function startUpload(){
+      document.getElementById('f1_upload_process').style.visibility = 'visible';
+      document.getElementById('f1_upload_form').style.visibility = 'hidden';
+      return true;
+}
+
+function stopUpload(success){
+      var result = '';
+      if (success == 1){
+         result = '<span class="msg">The file was uploaded successfully!<\/span><br/><br/>';
+      }
+      else {
+         result = '<span class="emsg">There was an error during file upload!<\/span><br/><br/>';
+      }
+      document.getElementById('f1_upload_process').style.visibility = 'hidden';
+      document.getElementById('f1_upload_form').innerHTML = result + '<label>File: <input name="image" type="file" size="30" /><\/label><label><input type="submit" name="submitBtn" class="sbtn" value="Upload" /><\/label>';
+      document.getElementById('f1_upload_form').style.visibility = 'visible';      
+      return true;   
+}
+//-->
+</script>   
 </head>
   <body>
 
@@ -88,8 +111,24 @@ window.onload=init;
     <div class="container">
       <div class="hero-unit">
          <hgroup><h1>Select you Picture ! </h1> <hr>
+<<<<<<< HEAD
          <input type="file" name="file" />
          <button class ="btn btn-primary"  onclick="fileUpload();"> Upload Picture</button>
+=======
+         <form action="http://engineerinme.com/apps/sdk/gettext.php" method="post" enctype="multipart/form-data" target="upload_target" onsubmit="startUpload();" >
+                     <p id="f1_upload_process">Loading...<br/><img src="test/loader.gif" /><br/></p>
+                     <p id="f1_upload_form" align="center"><br/>
+                         <label>File:  
+                              <input name="image" type="file" size="30" />
+                         </label>
+                         <label>
+                             <input type="submit" name="submitBtn" class="sbtn" value="Upload" />
+                         </label>
+                     </p>
+                     
+                     <iframe id="upload_target" name="upload_target" src="http://engineerinme.com/apps/sdk/gettext.php" style="width:0;height:0;border:0px solid #fff;"></iframe>
+                 </form>
+>>>>>>> 4a73745d3579a503e391bc7514d722eb3f1d19be
       </div>
    
       <footer>
@@ -103,6 +142,7 @@ window.onload=init;
        JavaScript below!                                             -->
 
 <!-- jQuery via Google + local fallback, see h5bp.com -->
+	
    <script src="js/jquery-1.7.1.min.js"></script>
    <!--script>window.jQuery || document.write('<script src="js/jquery-1.7.1.min.js"><\/script>')</script-->
 
