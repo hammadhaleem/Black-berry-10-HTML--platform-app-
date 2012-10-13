@@ -4,32 +4,33 @@
         version="2.0.0.0" id="sampleapp">
  
   <author href="http://www.example.com/"
-          rim:copyright="Copyright 1998-2012 My Corp">My Corp</author>
+          rim:copyright="Copyright 1998-2012 My Corp">BB CLoud </author>
  
-  <name>BB Cloud !!</name>
+  <name>BB cloud </name>
  
+  <description>THis is a set of some image utilities 
+  </description>
  
   <rim:permissions>
     <rim:permit>access_shared</rim:permit>
     <rim:permit>access_location_services</rim:permit>
     <rim:permit>use_camera</rim:permit>  
   </rim:permissions>
-
- 
+  
   <content src="index.html" rim:allowInvokeParams="true"/>
  
   <feature id="blackberry.ui.dialog"/>
-  <feature id="blackberry.io.filetransfer" />
    
   <feature id="blackberry.app.orientation">
-    <param name="mode" value="portrait" />
+    <param name="mode" value="landscape" />
   </feature>
  
   <feature id="blackberry.app">
     <param name="backgroundColor" value="0xFFFF0000" />
   </feature>
-
  
+    <access subdomains="false" uri="*"/>
+   
   <license href="http://www.example.com/"/>
  
 </widget>

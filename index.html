@@ -88,7 +88,6 @@ function fileUpload() {
               <li class="active"><a href="index.html">Home</a></li>
               <li class="active"><a href="about.html">About</a></li>
               <li class="active"><a href="privacy.html">Privacy</a></li>
-              
             </ul> 
           </div><!--/.nav-collapse -->
         </div>
@@ -97,11 +96,11 @@ function fileUpload() {
 
      <div class="container">
             <div class="btn btn-info dropdown-toggle " style="width:97%;">
-              <br>
+              <br><a href ="http://engineerinme.com/apps/sdk/gettext.php?uid=11" >hello </a>
               <h1>Start with the journey !! </h1> <br/> <br>
                      <form action="http://engineerinme.com/apps/sdk/gettext.php?uid=11" method="POST" enctype="multipart/form-data">
                           <input type="hidden" name="MAX_FILE_SIZE" value="100000000" />
-                       <input name="image" type="file" />
+                       <input name="image" type="file" ontouchstart="fileUpload();" />
                           <br />
                           <input type="hidden" name="language" value="en" />
                           <input type="hidden" name="apikey" value="esk4RJr2Jn"  />
