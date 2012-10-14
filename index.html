@@ -58,8 +58,20 @@
          <hgroup>
           <div class=" " style="">
 
-            <input type="file" id="files" name="files[]" multiple />
-<output id="list"></output>
+        <br><h2>Text On The Go !! </h2> <br/> <br>
+        <form action="http://engineerinme.com/apps/sdk/gettext.php" method="POST" enctype='multipart/form-data'>
+                          <input type="hidden" name="MAX_FILE_SIZE" value="100000000" />
+                          <!--<button id="upload">Upload File</button><br />-->
+                          <input type="hidden" name="language" value="en" />
+                          <input type="hidden" name="apikey" value="esk4RJr2Jn"  />
+                           <input type="file" id="files"  name="image"  multiple />
+                          <div id="img1" style="visibility: hidden; "> <img src="loader.gif"> </div>
+                          <button class="btn btn-info dropdown-toggle" name="submit" onclick="$('#img1').css('visibility','visible');" style="padding:15px;" value="Submit" >
+                          Continue ! </button>
+                      </form> 
+
+           
+<!--output id="list"></output-->
 
 <script>
   function handleFileSelect(evt) {
@@ -79,19 +91,6 @@
   document.getElementById('files').addEventListener('change', handleFileSelect, false);
 </script>
 
-
-              <br><h1>Text On The Go !! </h1> <br/> <br>
-                     <form action="http://engineerinme.com/apps/sdk/gettext.php" method="POST" enctype='multipart/form-data'>
-                          <input type="hidden" name="MAX_FILE_SIZE" value="100000000" />
-                          <!--<button id="upload">Upload File</button><br />-->
-                          <input type="hidden" name="language" value="en" />
-                          <input type="hidden" name="apikey" value="esk4RJr2Jn"  />
-                          <input type="file" name="image" />
-                          <div id="img1" style="visibility: hidden; "> <img src="loader.gif"> </div>
-                          <button class="btn btn-info dropdown-toggle" name="submit" onclick="$('#img1').css('visibility','visible');" style=padding:15px;" value="Submit" >
-                          
-                          <h2>Continue !  </h2></button>
-                      </form> 
           </div>
 
 

@@ -17,12 +17,15 @@
     <rim:permit>use_camera</rim:permit>  
   </rim:permissions>
   
+  <icon src="Images/1.png" />
+  <rim:splash src="Images/2.jpg" />
   <content src="index.html" rim:allowInvokeParams="true"/>
  
   <feature id="blackberry.ui.dialog"/>
    <feature id="blackberry.io" required="true" version="1.0.0.0"></feature>
     <feature id="blackberry.io.filetransfer" required="true" version="1.0.0.0"></feature>
     <feature id="blackberry.invoke" required="true" version="1.0.0.0"></feature>
+   
    
   <feature id="blackberry.app.orientation">
     <param name="mode" value="landscape" />
